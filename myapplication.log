@@ -1,0 +1,698 @@
+2018-09-19 22:40:09.928  INFO 5308 --- [main] com.schibani.kafka.KafkaDemoApplication  : Starting KafkaDemoApplication v1.0-SNAPSHOT on DESKTOP-4CUDDRO with PID 5308 (D:\devhome\work\kafka\target\kafka-1.0-SNAPSHOT.jar started by WASSIM in D:\devhome\work\kafka)
+2018-09-19 22:40:09.935  INFO 5308 --- [main] com.schibani.kafka.KafkaDemoApplication  : No active profile set, falling back to default profiles: default
+2018-09-19 22:40:10.049  INFO 5308 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@510f3d34: startup date [Wed Sep 19 22:40:10 CEST 2018]; root of context hierarchy
+2018-09-19 22:40:10.707  INFO 5308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$170f6e1e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-19 22:40:11.269  INFO 5308 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-19 22:40:11.276  INFO 5308 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-09-19 22:40:11.288  INFO 5308 --- [main] com.schibani.kafka.KafkaDemoApplication  : [start.as, topic]
+2018-09-19 22:40:11.288  INFO 5308 --- [main] com.schibani.kafka.KafkaDemoApplication  : Start as = consumer
+2018-09-19 22:40:11.300  INFO 5308 --- [main] com.schibani.kafka.KafkaDemoApplication  : Started KafkaDemoApplication in 2.357 seconds (JVM running for 4.79)
+2018-09-19 22:40:11.324  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2018-09-19 22:40:11.332  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2018-09-19 22:40:11.911  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2018-09-19 22:40:11.911  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2018-09-19 22:42:39.722  INFO 10168 --- [main] com.schibani.kafka.KafkaDemoApplication  : Starting KafkaDemoApplication v1.0-SNAPSHOT on DESKTOP-4CUDDRO with PID 10168 (D:\devhome\work\kafka\target\kafka-1.0-SNAPSHOT.jar started by WASSIM in D:\devhome\work\kafka)
+2018-09-19 22:42:39.726  INFO 10168 --- [main] com.schibani.kafka.KafkaDemoApplication  : No active profile set, falling back to default profiles: default
+2018-09-19 22:42:39.814  INFO 10168 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@510f3d34: startup date [Wed Sep 19 22:42:39 CEST 2018]; root of context hierarchy
+2018-09-19 22:42:40.463  INFO 10168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$170f6e1e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-19 22:42:40.880  INFO 10168 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-19 22:42:40.889  INFO 10168 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-09-19 22:42:40.900  INFO 10168 --- [main] com.schibani.kafka.KafkaDemoApplication  : [start.as, topic, message]
+2018-09-19 22:42:40.900  INFO 10168 --- [main] com.schibani.kafka.KafkaDemoApplication  : Start as = producer
+2018-09-19 22:42:40.910  INFO 10168 --- [main] com.schibani.kafka.KafkaDemoApplication  : Started KafkaDemoApplication in 1.724 seconds (JVM running for 2.651)
+2018-09-19 22:42:40.935  INFO 10168 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2018-09-19 22:42:40.941  INFO 10168 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2018-09-19 22:42:41.080  INFO 10168 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2018-09-19 22:42:41.080  INFO 10168 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2018-09-19 22:42:41.082  INFO 10168 --- [SimpleAsyncTaskExecutor-1] com.schibani.kafka.producer.Producer     : Begin producer 1------------------------- 
+2018-09-19 22:43:11.136  WARN 10168 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : Bootstrap broker localhost:9092 disconnected
+2018-09-19 22:43:41.085  INFO 10168 --- [SimpleAsyncTaskExecutor-1] com.schibani.kafka.producer.Producer     : Message 'kafka message' sent to topic: test
+2018-09-19 22:43:41.086  INFO 10168 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.producer.KafkaProducer     : Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2018-09-19 22:43:58.626  WARN 10168 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 1 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:43:58.630  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 1 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:43:58.658  INFO 10168 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@510f3d34: startup date [Wed Sep 19 22:42:39 CEST 2018]; root of context hierarchy
+2018-09-19 22:43:58.667  INFO 10168 --- [Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-09-19 22:43:58.669  INFO 10168 --- [Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-09-19 22:43:58.672  INFO 10168 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-09-19 22:43:58.921  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 2 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:43:59.084  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 4 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:43:59.242  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 6 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:43:59.463  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 8 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:43:59.623  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 10 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:43:59.788  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 12 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:43:59.954  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 14 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:00.100  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 16 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:00.243  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 18 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:00.412  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 20 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:00.548  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 22 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:00.697  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 24 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:00.840  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 26 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:00.980  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 28 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:01.131  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 30 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:01.269  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 32 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:01.421  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 34 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:01.582  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 36 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:01.723  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 38 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:01.855  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 40 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:02.011  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 42 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:02.145  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 44 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:02.311  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 46 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:02.452  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 48 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:02.616  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 50 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:02.777  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 52 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:02.927  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 54 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:03.043  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 56 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:03.157  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 58 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:03.298  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 60 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:03.424  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 62 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:03.551  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 64 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:03.671  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 66 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:03.783  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 68 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:03.900  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 70 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:04.044  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 72 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:04.154  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 74 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:04.295  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 76 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:04.409  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 78 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:04.548  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 80 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:04.652  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 82 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:04.756  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 84 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:04.863  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 86 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:04.966  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 88 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:05.071  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 90 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:05.177  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 92 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:05.301  WARN 5308 --- [SimpleAsyncTaskExecutor-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 94 : {test=LEADER_NOT_AVAILABLE}
+2018-09-19 22:44:05.334  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) for group test.
+2018-09-19 22:44:05.340  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group test
+2018-09-19 22:44:05.341  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group test
+2018-09-19 22:44:05.385  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) dead for group test
+2018-09-19 22:44:05.497  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) for group test.
+2018-09-19 22:44:05.497  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group test
+2018-09-19 22:44:06.030  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Successfully joined group test with generation 1
+2018-09-19 22:44:06.031  INFO 5308 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.ConsumerCoordinator  : Setting newly assigned partitions [] for group test
+2018-09-19 22:44:24.028  INFO 5308 --- [kafka-coordinator-heartbeat-thread | test] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) dead for group test
+2018-09-19 22:44:27.891  INFO 5308 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@510f3d34: startup date [Wed Sep 19 22:40:10 CEST 2018]; root of context hierarchy
+2018-09-19 22:44:27.894  INFO 5308 --- [Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-09-19 22:44:27.894  INFO 5308 --- [Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-09-19 22:44:27.894  INFO 5308 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-09-19 22:48:56.612  INFO 8024 --- [main] com.schibani.kafka.KafkaDemoApplication  : Starting KafkaDemoApplication v1.0-SNAPSHOT on DESKTOP-4CUDDRO with PID 8024 (D:\devhome\work\kafka\target\kafka-1.0-SNAPSHOT.jar started by WASSIM in D:\devhome\work\kafka)
+2018-09-19 22:48:56.615  INFO 8024 --- [main] com.schibani.kafka.KafkaDemoApplication  : No active profile set, falling back to default profiles: default
+2018-09-19 22:48:56.695  INFO 8024 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@510f3d34: startup date [Wed Sep 19 22:48:56 CEST 2018]; root of context hierarchy
+2018-09-19 22:48:57.358  INFO 8024 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$7b6e80f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-19 22:48:57.787  INFO 8024 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-19 22:48:57.795  INFO 8024 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-09-19 22:48:57.806  INFO 8024 --- [main] com.schibani.kafka.KafkaDemoApplication  : [start.as, topic, message]
+2018-09-19 22:48:57.806  INFO 8024 --- [main] com.schibani.kafka.KafkaDemoApplication  : Start as = producer
+2018-09-19 22:48:57.814  INFO 8024 --- [main] com.schibani.kafka.KafkaDemoApplication  : Started KafkaDemoApplication in 1.705 seconds (JVM running for 2.779)
+2018-09-19 22:48:57.843  INFO 8024 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2018-09-19 22:48:57.850  INFO 8024 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2018-09-19 22:48:58.006  INFO 8024 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2018-09-19 22:48:58.006  INFO 8024 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2018-09-19 22:48:58.008  INFO 8024 --- [SimpleAsyncTaskExecutor-1] com.schibani.kafka.producer.Producer     : Begin producer 1------------------------- 
+2018-09-19 22:48:58.124  INFO 8024 --- [SimpleAsyncTaskExecutor-1] com.schibani.kafka.producer.Producer     : Message 'kafka message' sent to topic: test
+2018-09-19 22:48:58.124  INFO 8024 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.producer.KafkaProducer     : Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2018-09-19 22:49:28.152  INFO 8024 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@510f3d34: startup date [Wed Sep 19 22:48:56 CEST 2018]; root of context hierarchy
+2018-09-19 22:49:28.159  INFO 8024 --- [Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-09-19 22:49:28.161  INFO 8024 --- [Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-09-19 22:49:28.163  INFO 8024 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-09-19 22:50:21.333  INFO 4536 --- [main] com.schibani.kafka.KafkaDemoApplication  : Starting KafkaDemoApplication v1.0-SNAPSHOT on DESKTOP-4CUDDRO with PID 4536 (D:\devhome\work\kafka\target\kafka-1.0-SNAPSHOT.jar started by WASSIM in D:\devhome\work\kafka)
+2018-09-19 22:50:21.337  INFO 4536 --- [main] com.schibani.kafka.KafkaDemoApplication  : No active profile set, falling back to default profiles: default
+2018-09-19 22:50:21.402  INFO 4536 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@510f3d34: startup date [Wed Sep 19 22:50:21 CEST 2018]; root of context hierarchy
+2018-09-19 22:50:22.077  INFO 4536 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$c3d1e982] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-19 22:50:22.508  INFO 4536 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-19 22:50:22.517  INFO 4536 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-09-19 22:50:22.528  INFO 4536 --- [main] com.schibani.kafka.KafkaDemoApplication  : [start.as, topic, message]
+2018-09-19 22:50:22.528  INFO 4536 --- [main] com.schibani.kafka.KafkaDemoApplication  : Start as = producer
+2018-09-19 22:50:22.536  INFO 4536 --- [main] com.schibani.kafka.KafkaDemoApplication  : Started KafkaDemoApplication in 1.711 seconds (JVM running for 2.697)
+2018-09-19 22:50:22.556  INFO 4536 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2018-09-19 22:50:22.562  INFO 4536 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = all
+	batch.size = 16384
+	block.on.buffer.full = false
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 1
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.fetch.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	timeout.ms = 30000
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2018-09-19 22:50:22.710  INFO 4536 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2018-09-19 22:50:22.710  INFO 4536 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2018-09-19 22:50:22.712  INFO 4536 --- [SimpleAsyncTaskExecutor-1] com.schibani.kafka.producer.Producer     : Begin producer 1------------------------- 
+2018-09-19 22:50:22.804  INFO 4536 --- [SimpleAsyncTaskExecutor-1] com.schibani.kafka.producer.Producer     : Message 'kafka message 22' sent to topic: test
+2018-09-19 22:50:22.804  INFO 4536 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.producer.KafkaProducer     : Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2018-09-19 22:50:52.829  INFO 4536 --- [Thread-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@510f3d34: startup date [Wed Sep 19 22:50:21 CEST 2018]; root of context hierarchy
+2018-09-19 22:50:52.834  INFO 4536 --- [Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-09-19 22:50:52.834  INFO 4536 --- [Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-09-19 22:50:52.835  INFO 4536 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-09-19 22:51:02.437  INFO 12040 --- [main] com.schibani.kafka.KafkaDemoApplication  : Starting KafkaDemoApplication v1.0-SNAPSHOT on DESKTOP-4CUDDRO with PID 12040 (D:\devhome\work\kafka\target\kafka-1.0-SNAPSHOT.jar started by WASSIM in D:\devhome\work\kafka)
+2018-09-19 22:51:02.443  INFO 12040 --- [main] com.schibani.kafka.KafkaDemoApplication  : No active profile set, falling back to default profiles: default
+2018-09-19 22:51:02.524  INFO 12040 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@510f3d34: startup date [Wed Sep 19 22:51:02 CEST 2018]; root of context hierarchy
+2018-09-19 22:51:03.161  INFO 12040 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$1484ac15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-19 22:51:03.615  INFO 12040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-09-19 22:51:03.625  INFO 12040 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-09-19 22:51:03.637  INFO 12040 --- [main] com.schibani.kafka.KafkaDemoApplication  : [start.as, topic]
+2018-09-19 22:51:03.637  INFO 12040 --- [main] com.schibani.kafka.KafkaDemoApplication  : Start as = consumer
+2018-09-19 22:51:03.646  INFO 12040 --- [main] com.schibani.kafka.KafkaDemoApplication  : Started KafkaDemoApplication in 1.748 seconds (JVM running for 2.764)
+2018-09-19 22:51:03.673  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2018-09-19 22:51:03.680  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.id = consumer-1
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = test
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2018-09-19 22:51:03.870  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.10.1.1
+2018-09-19 22:51:03.870  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : f10ef2720b03b247
+2018-09-19 22:51:04.084  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) for group test.
+2018-09-19 22:51:04.088  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.ConsumerCoordinator  : Revoking previously assigned partitions [] for group test
+2018-09-19 22:51:04.089  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group test
+2018-09-20 01:55:07.900  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) dead for group test
+2018-09-20 01:55:08.108  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) for group test.
+2018-09-20 01:55:08.109  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group test
+2018-09-20 08:43:16.556  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) dead for group test
+2018-09-20 08:43:17.587  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) for group test.
+2018-09-20 08:43:17.588  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group test
+2018-09-20 08:48:27.590  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) dead for group test
+2018-09-20 08:48:27.700  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) for group test.
+2018-09-20 08:48:27.704  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group test
+2018-09-20 11:50:42.500  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) dead for group test
+2018-09-20 11:50:42.705  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) for group test.
+2018-09-20 11:50:42.718  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group test
+2018-09-20 21:56:33.531  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) dead for group test
+2018-09-20 21:56:33.740  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Discovered coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) for group test.
+2018-09-20 21:56:33.741  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : (Re-)joining group test
+2018-09-20 22:01:43.741  INFO 12040 --- [SimpleAsyncTaskExecutor-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator DESKTOP-4CUDDRO:9092 (id: 2147483647 rack: null) dead for group test
+2018-10-01 15:32:43.305  INFO 13932 --- [main] com.schibani.kafka.KafkaDemoApplication  : Starting KafkaDemoApplication on DESKTOP-4CUDDRO with PID 13932 (D:\devhome\work\kafka\target\classes started by WASSIM in D:\devhome\work\kafka)
+2018-10-01 15:32:43.309  INFO 13932 --- [main] com.schibani.kafka.KafkaDemoApplication  : No active profile set, falling back to default profiles: default
+2018-10-01 15:32:43.414  INFO 13932 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7f77e91b: startup date [Mon Oct 01 15:32:43 CEST 2018]; root of context hierarchy
+2018-10-01 15:32:44.281  INFO 13932 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$7e64c9cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-01 15:32:44.648  INFO 13932 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-01 15:32:44.656  INFO 13932 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-01 15:32:44.665  INFO 13932 --- [main] com.schibani.kafka.KafkaDemoApplication  : []
+2018-10-01 15:32:44.668  INFO 13932 --- [main] com.schibani.kafka.KafkaDemoApplication  : Started KafkaDemoApplication in 1.872 seconds (JVM running for 5.068)
+2018-10-01 15:32:44.670  INFO 13932 --- [Thread-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7f77e91b: startup date [Mon Oct 01 15:32:43 CEST 2018]; root of context hierarchy
+2018-10-01 15:32:44.678  INFO 13932 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2018-10-01 15:32:44.680  INFO 13932 --- [Thread-2] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-10-01 15:32:44.681  INFO 13932 --- [Thread-2] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
